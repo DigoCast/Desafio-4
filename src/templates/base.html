@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{%block title%}{%endblock%} </title>
+  <link rel="icon" type="image/png" href="{{url_for('static', filename='images/Breaking-Bad-Symbol.png')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/normalize.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/stylebase.css')}}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+  {%block css%} {%endblock%}
+</head>
+
+<body>
+  <header class="navbar-home">
+    <nav>
+      <div class="menu-icon">
+        <i class="fa fa-bars fa-2x"></i>
+      </div>
+      <div class="logo">
+        <a href="/"><img src="{{url_for('static', filename='images/Breaking_Bad_logo.svg')}}" class="img-logo" /></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <!-- HOME -->
+          {%block header%} {%endblock%}
+          <!-- SINOPSE -->
+          <li><a href="/sinopse"><button type="button" class="btn btn-outline-dark"><img
+                src="https://fontmeme.com/permalink/240424/af12ac6469de40ffe2d249866507d39e.png"
+                alt="fonte-heart-breaking-bad" border="0"></button></a></li>
+          <!-- PERSONAGENS -->
+          <li><a href="/personagens"><button type="button" class="btn btn-outline-dark"><img
+                src="https://fontmeme.com/permalink/240424/254dbfe26445c458079512684a96a385.png"
+                alt="fonte-heart-breaking-bad" border="0"></button></a></li>
+          <!-- link para a fonte -->
+          <!-- https://fontmeme.com/fontes/fonte-heart-breaking-bad/ -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  {%block content%}{%endblock%}
+
+  <footer class="text-center bg-body-tertiary">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2024 Copyright:
+      <a class="" href="">Diego.Cast/github</a>
+    </div>
+  </footer>
+
+  <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+body {
+  height: auto;
+}
+
+.cover {
+  max-width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  position: relative;
+}
+h1{
+  font-size: 72px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cover img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+  transition: 0.4s;
+}
+
+.titulo-cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: 10px;
+  font-family: Anton;
+}
+.tituloum {
+  margin-top: 100px;
+}
+.container-temporadas {
+  margin: 100px 0;
+}
+.img-season1 {
+  float: left;
+  margin: 0 50px 40px 0;
+  max-width: 350px;
+}
+.poster-season1 {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+  max-width: 350px;
+  height: auto;
+}
+.img-season2 {
+  display: flex;
+  justify-content: initial;
+  float: right;
+  margin: 0 0 40px 50px;
+  height: auto;
+  max-width: 50%;
+}
+.poster-season2 {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+  height: auto;
+  float: right;
+}
+
+.navegacao-interna {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.container-conteudo ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-conteudo li a {
+  background-color: #3f663f;
+  color: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  justify-content: center;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+  font-weight: 600;
+}
+.container-conteudo li a:hover{
+  background-color: darkgreen;
+  color: #fff;
+  padding: 60px;
+}
+.nav-item {
+  max-width: 300px;
+  margin: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+      font-size: 40px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .cover img{
+    margin-top: 90px;
+
+  }
+}

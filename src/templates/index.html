@@ -1,0 +1,222 @@
+{%extends "base.html"%}
+{%block title%} Breaking Bad {%endblock%}
+{%block css%}
+<link rel="stylesheet" href="{{url_for('static', filename='css/stylehome.css')}}" />
+{%endblock%}
+{%block content%}
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{url_for('static', filename='images/breaking-bed.jpg')}}" class="d-block w-100 image-cover img-fluid"
+        alt="..." />
+    </div>
+    <div class="carousel-item">
+      <img src="{{url_for('static', filename='images/breakingbadcarrossel2.jpg')}}"
+        class="d-block w-100 image-cover img-fluid" alt="..." />
+    </div>
+    <div class="carousel-item">
+      <img src="{{url_for('static', filename='images/carroussel3.jpg')}}" class="d-block w-100 image-cover img-fluid"
+        alt="..." />
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="container-conteudo">
+  <section class="introducao">
+    <h1>Breaking Bad</h1>
+    <div class="container-introducao">
+      <img src="{{url_for('static', filename='images/poster-bb.jpg')}}" alt="" class="poster-home" />
+      <p class="texto-introducao">
+        Breaking Bad é uma série de televisão americana criada e produzida por
+        Vince Gilligan. Ela retrata a vida do químico Walter White, um homem
+        brilhante frustrado em dar aulas para adolescentes do ensino médio
+        enquanto lida com um filho sofrendo de paralisia cerebral, uma esposa
+        grávida e dívidas intermináveis. White, então, é diagnosticado com um
+        câncer no pulmão - o que o leva a sofrer um colapso emocional e abraçar
+        uma vida de crimes para pagar suas dívidas hospitalares e dar uma boa
+        vida aos seus filhos. Walter resolve produzir metanfetamina de alta
+        pureza com seu ex-aluno, Jesse Pinkman.
+        <br />
+        <br />
+        Breaking Bad se passa em Albuquerque, Novo México, e gira em torno das
+        escolhas de seu protagonista, as quais o levam a uma intensa, dolorosa e
+        inevitável transformação. Amplamente considerada como uma das melhores
+        séries da história, ao seu final, foi um dos programas da televisão a
+        cabo mais assistidos nos Estados Unidos, recebendo inúmeros prémios,
+        incluindo dezesseis Primetime Emmy Awards, oito Satellite Awards, dois
+        Globos de Ouro e um Prémio Escolha Popular. Em 2014, entrou para o Livro
+        dos Recordes como o seriado mais bem avaliado de todos os tempos pela
+        crítica.
+        <br /><br />
+        A série foi originalmente exibida pelo canal de televisão por assinatura
+        AMC, onde estreou no dia 20 de janeiro de 2008 e, depois de cinco
+        temporadas de sucesso, teve seu último episódio transmitido no dia 29 de
+        setembro de 2013. Em Portugal, foi exibida pelos canais SIC Radical,
+        TVséries e MOV. No Brasil, o seriado é exibido pelo canal pago AXN e
+        pelo serviço de streaming Netflix e, na TV aberta, foi exibida pela Rede
+        Record e pela Band.
+        <br><br>
+        <a href="/sinopse">Clique aqui para ver sinopse da serie completa</a>
+      </p>
+    </div>
+  </section>
+
+  <hr class="linha-separacao" />
+  <h1>Personagens principais</h1>
+  <div class="treiler-container">
+
+    <div class="poapo">
+      <a href="/personagens">
+        <div class="card">
+          <div class="overlay">
+            <h2>Personagens</h2>
+            <p>Vejá as descricão de cada um dos principais personagensde Breaking Bad</p>
+          </div>
+          <img src="{{url_for('static', filename='images/breaking-bad-personagens.jpg')}}" alt="Imagem do Card">
+        </div>
+      </a>
+      <div class="texto-personagens">
+        <p>
+          Considerada uma das melhores séries de TV de todos os tempos, a trama do professor
+          de química fracassado que se
+          torna o maior fabricante de drogas do Novo México é objeto de estudo até hoje, além de ser uma inspiração
+          comum
+          a todo o mundo do entretenimento. Com uma história complexa, humana e riquíssima, uma produção e
+          cinematografia
+          impecáveis, além de um elenco praticamente perfeito, o criador, produtor, roteirista, diretor e gênio Vince
+          Gilligan deu vida a um exército de personagens inesquecíveis, com personalidades únicas.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="linha-separacao" />
+
+  <h1>Trailer</h1>
+
+  <div class="treiler-container">
+
+    <div class="image-netflix">
+      <a href="https://www.netflix.com/watch/70143836?source=35" target="_blank">
+        <img src="{{url_for('static', filename='images/Netflix_icon.svg.png')}}" alt="" class="image-netflix">
+      </a>
+    </div>
+
+
+    <video poster="{{url_for('static', filename='images/Breaking-Bad-video.webp')}}" width="60%" height="auto" controls>
+      <source src="{{url_for('static', filename='video/BreakingBad _Treiler.mp4')}}" type="video/mp4" />
+    </video>
+
+  </div>
+
+  <hr class="linha-separacao" />
+
+  <div class="container-avaliacao">
+    <h2>Deixe sua Avaliação do site</h2>
+    <br>
+    <form action="/add_review" method="post">
+      <input type="text" id="nome" autocomplete="off" name="nome" class="input-nome" placeholder="Nome"
+        required><br><br>
+      <textarea id="comentario" name="comentario" class="input-nome" placeholder="Deixe seu comentário aqui"
+        required></textarea><br>
+      <label for="avaliacao">Avaliação:</label><br>
+      <div class="estrelas">
+        <div class="rating">
+          <input checked='' type="radio" id="estrela5" name="avaliacao" value="5" />
+          <label for="estrela5" title="text"><svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg"
+              class="star-solid">
+              <path
+                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+              </path>
+            </svg>
+          </label>
+          <input type="radio" id="estrela4" name="avaliacao" value="4" />
+          <label for="estrela4" title="text"><svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg"
+              class="star-solid">
+              <path
+                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+              </path>
+            </svg></label>
+          <input type="radio" id="estrela3" name="avaliacao" value="3" />
+          <label for="estrela3" title="text"><svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg"
+              class="star-solid">
+              <path
+                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+              </path>
+            </svg></label>
+          <input type="radio" id="estrela2" name="avaliacao" value="2" />
+          <label for="estrela2" title="text"><svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg"
+              class="star-solid">
+              <path
+                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+              </path>
+            </svg></label>
+          <input type="radio" id="estrela1" name="avaliacao" value="1" />
+          <label for="estrela1" title="text"><svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg"
+              class="star-solid">
+              <path
+                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+              </path>
+            </svg></label>
+        </div>
+      </div><br><br>
+      <button class="enviar-avaliacao" type="submit">
+        <div class="svg-wrapper-1">
+          <div class="svg-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path fill="currentColor"
+                d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+              </path>
+            </svg>
+          </div>
+        </div>
+        <span>Enviar avaliação</span>
+      </button>
+    </form>
+  </div>
+
+  <hr class="linha-separacao" />
+
+  <h2>Avaliações dos Usuários</h2><br>
+  <div id="reviews">
+
+    {% for review in reviews %}
+    <div class="container-avaliacao">
+      <div class="review">
+        <p><strong>Nome:</strong> {{ review.nome }}</p>
+        <p><strong>Comentário:</strong> {{ review.comentario }}</p>
+        <p><strong>Avaliação:</strong></p>
+        <div class="stars">
+          {% for i in range(1, 6) %}
+          {% if i <= review.avaliacao %} <span><svg viewBox="0 0 576 512" height="1.7em"
+              xmlns="http://www.w3.org/2000/svg" class="star-solid" style="fill: #ff9e0b">
+              <path
+                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+              </path>
+            </svg></span>
+            {% else %}
+            <span><svg viewBox="0 0 576 512" height="1.4em" xmlns="http://www.w3.org/2000/svg" class="star-solid"
+                style="fill: #666;">
+                <path
+                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z">
+                </path>
+              </svg></span>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <p class="data-avaliacao"><em>{{ review.data }}</em></p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{%endblock%}

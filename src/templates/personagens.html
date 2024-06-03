@@ -1,0 +1,138 @@
+{%extends "base.html"%}
+
+{%block title%} Personagens {%endblock%}
+
+{%block css%}
+<link rel="stylesheet" href="{{url_for('static', filename='css/stylepersonagens.css')}}" />
+{%endblock%}
+
+
+{%block header%}
+<!-- HOME -->
+<li><a href="/"><button type="button" class="btn btn-outline-dark"><img
+                src="https://fontmeme.com/permalink/240426/e4c53e304d5131a96ebf095fbbeddd22.png"
+                alt="fonte-heart-breaking-bad" border="0"></button></a></li>
+{%endblock%}
+
+{%block content%}
+<div class="cover">
+    <img src="{{url_for('static', filename='images/personagens.jpg')}}" alt="">
+    <div class="titulo-cover">
+        <h1>Personagens e Elenco</h1>
+    </div>
+</div>
+<div class="titulo-personagens">
+<h2>PERSONAGENS PRINCIPAIS</h2>
+</div>
+<div class="container-conteudo">
+    <div class="card-personagens">
+
+        <div class="card" onclick="toggleText(this)">
+            <div class="card-background1"></div>
+            <div class="card-content">
+                <h2 class="card-title">Walter White</h2>
+                <h3>Ator: Bryan Cranston</h3>
+                <p class="card-text hidden">Descrição: Walter White é um professor de química de ensino médio
+                    diagnosticado com câncer no pulmão adenocarcinoma no estágio III, e passa a produzir metanfetamina
+                    para garantir o futuro financeiro de sua família. Com o progresso do seu negócio, Walter ganha uma
+                    reputação notória utilizando o pseudônimo Heisenberg. Bryan Cranston afirmou que, embora goste de
+                    fazer comédia, ele decidiu que "...realmente deve se concentrar em fazer outra coisa. Mas eu acho
+                    que qualquer bom drama vale o seu peso e tem sempre uma pitada de comédia, porque você pode aliviar
+                    a tensão do público, quando é necessário. Walt White não tem nenhum indício de que ele é
+                    ocasionalmente engraçado, mas como ator eu reconheço quando há momentos e oportunidades para
+                    comédia." <img src="{{url_for('static', filename='images/Walter_White2.webp')}}" alt="" class="imagem-personagem-dentro"> </p>
+                    
+            </div>
+        </div>
+    </div>
+
+    <div class="card-personagens">
+        <div class="card" onclick="toggleText(this)">
+            <div class="card-background2"></div>
+            <div class="card-content">
+                <h2 class="card-title">Skyler White</h2>
+                <h3>Atriz: Anna Gunn</h3>
+                <p class="card-text hidden">Descrição: Skyler White é a esposa de Walter, grávida do segundo filho do casal antes do seu diagnóstico, e que se torna cada vez mais desconfiada do comportamento do marido e do que ele esconde da família. Anna Gunn vê Skyler como "centrada, resistente, inteligente e orientada". Gunn vê a carreira de escritora de Skyler deixada de lado, dizendo: "Eu acho que ela realmente, no fundo, anseia por ser uma artista e ser criativa e produtiva. <img src="{{url_for('static', filename='images/Skyler.webp')}}" alt="" class="imagem-personagem-dentro"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-personagens">
+        <div class="card" onclick="toggleText(this)">
+            <div class="card-background3"></div>
+            <div class="card-content">
+                <h2 class="card-title">Jesse Pinkman</h2>
+                <h3>Ator: Bryan Cranston</h3>
+                <p class="card-text hidden">Descrição: Jesse Pinkman é um antigo aluno de ensino médio de Walt, e mais tarde, torna-se parceiro de Walter White no tráfico de metanfetamina. Na escola, Jesse era um pequeno consumidor e traficante de drogas. Ele era um estudante que dava pouca atenção às aulas de química de Walter. Anos mais tarde, Jesse está envolvido no pesado esquema de tráfico de drogas. Como Walt, Jesse fica perturbado com a violência nos altos níveis de tráfico de drogas, mas ele faz o que acha necessário. Ele muitas vezes sofre sentimentos de culpa devido à morte de pessoas com quem ele se associa, todas relacionadas ao negócio. Ocasionalmente ele vai às reuniões de Narcóticos Anônimos para ajudá-lo com esses sentimentos. Aaron Paul vê Jesse como um garoto engraçado. "Ele é apenas esta alma perdida - Não acho que ele seja uma má pessoa, ele simplesmente se misturou na turma errada." Paul elaborou a base do personagem, dizendo que "Ele não vem de um fundo abusivo, alcoólatra. Mas talvez ele simplesmente não se relaciona com o seu pai, talvez seu pai era muito rigoroso e muito correto para Jesse." Paul compara a relação do personagem com Walt ao seriado The Odd Couple.<img src="{{url_for('static', filename='images/Jesse.webp')}}" alt="" class="imagem-personagem-dentro"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-personagens">
+        <div class="card" onclick="toggleText(this)">
+            <div class="card-background4"></div>
+            <div class="card-content">
+                <h2 class="card-title">Henry R. "Hank" Schrader</h2>
+                <h3>Ator: Dean Norris</h3>
+                <p class="card-text hidden">Descrição: Hank Schrader é marido de Marie, cunhado de Walter e Skyler e agente do DEA. No início da série, Hank era cotado para ser o "alívio cômico." Dean Norris, que já interpretou diversos policias no cinema e na televisão, afirmou: "Tendo atuado em tantos papéis policiais, eu já conversei com diversos assessores técnicos e me sentia pronto para assumir a responsabilidade do papel. Coincidentemente, uma das minhas melhores amigas de infância é uma policial em Chicago e um de meus melhores amigos fora de Los Angeles é um xerife. Então eu comecei a ver todos os componentes dessa cultura."<img src="{{url_for('static', filename='images/Hank.webp')}}" alt="" class="imagem-personagem-dentro"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-personagens">
+        <div class="card" onclick="toggleText(this)">
+            <div class="card-background5"></div>
+            <div class="card-content">
+                <h2 class="card-title">Marie Schrader</h2>
+                <h3>Atriz: Betsy Brandt</h3>
+                <p class="card-text hidden">Descrição: Marie Schrader é irmã de Skyler e esposa cleptomaníaca de Hank. Betsy Brandt descreve Marie como "uma vadia desagradável", mas também afirma que há mais nela do que isso. "Eu acho que nós estamos vendo mais dela agora do que ela estaria lá para sua família. Mas é tudo sobre ela."<img src="{{url_for('static', filename='images/Marie.webp')}}" alt="" class="imagem-personagem-dentro"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-personagens">
+        <div class="card" onclick="toggleText(this)">
+            <div class="card-background6"></div>
+            <div class="card-content">
+                <h2 class="card-title">Walter White Junior</h2>
+                <h3>Ator: RJ Mitte</h3>
+                <p class="card-text hidden">Descrição: Walter White Júnior é o filho mais velho de Walter e Skyler, ele teve paralisia cerebral. Ele fica revoltado após o anúncio do câncer de Walter. Assim como Walter Jr., RJ Mitte tem paralisia cerebral, embora a sua seja uma forma mais branda.[42] Mitte afirmou que ele teve que regredir de sua terapia para retratar o personagem, ficar acordado até tarde da noite para piorar sua fala e de aprender a andar de muletas para que seu andar não parecesse falso.<img src="{{url_for('static', filename='images/WaltJr.webp')}}" alt="" class="imagem-personagem-dentro"></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card-personagens">
+        <div class="card" onclick="toggleText(this)">
+            <div class="card-background7"></div>
+            <div class="card-content">
+                <h2 class="card-title">Mike Ehrmantraut</h2>
+                <h3>Ator: Jonathan Banks</h3>
+                <p class="card-text hidden">Descrição: Mike Ehrmantraut trabalha para Gus como faxineiro e assassino de aluguel e também para Saul como investigador particular. O personagem de Mike foi comparado ao personagem de Harvey Keitel, Winston Wolf em Pulp Fiction, o qual Jonathan Banks diz que ele não estava tentando imitar: "Imediatamente tentei tirá-lo da minha mente, muito sinceramente. Seu faxineiro não é o meu faxineiro. Mas ao longo deste mundo, você suspeitaria que houve um grande número de faxineiros, seja do governo ou de prestadores de serviços individuais."<img src="{{url_for('static', filename='images/Mike.jpeg')}}" alt="" class="imagem-personagem-dentro"></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card-personagens">
+        <div class="card" onclick="toggleText(this)">
+            <div class="card-background8"></div>
+            <div class="card-content">
+                <h2 class="card-title">Saul Goodman</h2>
+                <h3>Ator: Bob Odenkirk</h3>
+                <p class="card-text hidden">Descrição: Saul Goodman é um advogado desvirtuado que representa Walt e Jesse. Odenkirk baseou seu personagem no produtor Robert Evans, "Pensei em Robert Evans, porque eu escutei The Kid Stays in the Picture em CD. Ele está constantemente mudando a sua cadência e sua fala. Ele enfatiza palavras interessantes. Ele tem um monte de atitude em quase todas as linhas que ele diz. Então, quando eu ensaiava as cenas dava a minha representação de Robert Evans para encontrar esses momentos. Então eu saia e fazia Saul."<img src="{{url_for('static', filename='images/SaulGoodman.jpg')}}" alt="" class="imagem-personagem-dentro"></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card-personagens">
+        <div class="card" onclick="toggleText(this)">
+            <div class="card-background9"></div>
+            <div class="card-content">
+                <h2 class="card-title">Gustavo "Gus" Fring</h2>
+                <h3>Ator: Giancarlo Esposito</h3>
+                <p class="card-text hidden">Descrição: Gus Fring é um grande distribuidor de drogas que tem como disfarce uma rede de fast food chamada Los Pollos Hermanos. Esposito afirmou que para a terceira temporada ele incorporou seu treino de ioga em sua atuação. "Gus Fring é o mau caráter mais legal que já andou na Terra. Penso como Eddie Olmos de volta em Miami Vice. Era como se estivesse morto – respirava com dificuldade. Eu pensei, como é que esse cara fica parado nesse incêndio e não faz nada? Gus me permitiu totalmente um nível de flexibilidade e relaxamento - não porque ele tenha o poder supremo e ele sabe que pode tirar a vida a alguém. Ele é apenas confiante."<img src="{{url_for('static', filename='images/Pollo.webp')}}" alt="" class="imagem-personagem-dentro"></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+{%endblock%}
